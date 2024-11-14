@@ -16,34 +16,18 @@ RUN apt-get update && apt-get install -y \
     php-curl \
     apache2 \
     libapache2-mod-php \
+    mysql-server \
     curl \
     git \
     sqlite3 \
     unzip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Télécharger et installer Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-# Télécharger et installer Symfony CLI
-RUN curl -sS https://get.symfony.com/cli/installer -o symfony-installer.sh && \
-    chmod +x symfony-installer.sh && \
-    ./symfony-installer.sh && \
-    mv /root/.symfony*/bin/symfony /usr/local/bin/symfony && \
-    rm symfony-installer.sh
-
-# Configurer Apache pour Symfony
-RUN sed -i 's#/var/www/html#/app/public#' /etc/apache2/sites-available/000-default.conf && \
-    a2enmod rewrite && \
-    echo "<Directory \"/app/public\">\n\
-        AllowOverride All\n\
-        Require all granted\n\
-    </Directory>" >> /etc/apache2/apache2.conf
 
 # Définir le répertoire de travail
-WORKDIR /app
+WORKDIR /var/www/html
 
-# Exposer le port 80
+# Exposer le port 80 pour Apache
 EXPOSE 80
 
 # Commande par défaut pour démarrer Apache
