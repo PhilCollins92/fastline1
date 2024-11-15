@@ -1,0 +1,16 @@
+<?php //easyadmin.routes.fqcn_to_route
+
+return [PHP_INT_MAX, [
+    'App\\Controller\\Admin\\DashboardController' => [
+        'App\\Controller\\Admin\\TaskCrudController' => [
+            'index' => 'admin_task_index',
+            'new' => 'admin_task_new',
+            'batchDelete' => 'admin_task_batch_delete',
+            'autocomplete' => 'admin_task_autocomplete',
+            'renderFilters' => 'admin_task_render_filters',
+            'edit' => 'admin_task_edit',
+            'delete' => 'admin_task_delete',
+            'detail' => 'admin_task_detail',
+        ],
+    ],
+]];
