@@ -1,0 +1,44 @@
+<?php //easyadmin.routes.route_to_fqcn
+
+return [PHP_INT_MAX, [
+    'admin_task_index' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\TaskCrudController',
+        'crudAction' => 'index',
+    ],
+    'admin_task_new' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\TaskCrudController',
+        'crudAction' => 'new',
+    ],
+    'admin_task_batch_delete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\TaskCrudController',
+        'crudAction' => 'batchDelete',
+    ],
+    'admin_task_autocomplete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\TaskCrudController',
+        'crudAction' => 'autocomplete',
+    ],
+    'admin_task_render_filters' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\TaskCrudController',
+        'crudAction' => 'renderFilters',
+    ],
+    'admin_task_edit' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\TaskCrudController',
+        'crudAction' => 'edit',
+    ],
+    'admin_task_delete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\TaskCrudController',
+        'crudAction' => 'delete',
+    ],
+    'admin_task_detail' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\TaskCrudController',
+        'crudAction' => 'detail',
+    ],
+]];
