@@ -17,3 +17,6 @@ echo "GITHUB_PAT" | docker login ghcr.io -u GITHUB_USERNAME --password-stdin
 Taguez l'image pour qu'elle soit compatible avec GitHub Container Registry. Le format est le suivant:
 ghcr.io/<USERNAME>/<REPOSITORY>:<TAG> 
 example: docker tag fastline-app ghcr.io/votre-utilisateur/fastline:latest
+
+# Pousser l'image dans GitHub Container Registry
+docker push ghcr.io/votre-utilisateur/fastline:latest
