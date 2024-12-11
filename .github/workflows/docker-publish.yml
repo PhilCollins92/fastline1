@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-    # Vérifiez le code source
     - name: Checkout code
       uses: actions/checkout@v3
     
