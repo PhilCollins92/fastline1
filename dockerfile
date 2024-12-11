@@ -12,7 +12,6 @@ RUN chmod +x /script-1.sh
 
 RUN /script-1.sh
 
-
 EXPOSE 80
 
 CMD ["apache2-foreground"]
