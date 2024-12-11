@@ -27,8 +27,8 @@ jobs:
     # Construisez l'image Docker
     - name: Build Docker image
       run: |
-        docker build -t ghcr.io/${{ github.repository_owner }}/fastline1:latest .
+        docker build -t ghcr.io/${{ env.REPO_NAME }}/fastline1:latest .
 
     - name: Push Docker image to GHCR
       run: |
-        docker push ghcr.io/${{ github.repository_owner }}/fastline1:latest
+        docker push ghcr.io/${{ env.REPO_NAME }}/fastline1:latest
